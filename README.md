@@ -129,6 +129,6 @@ To begin the war there should be players, we can generate players by creating an
 
 ## Expected Output
 
-![Superwars]()
+![Superwars](https://i1.faceprep.in/ProGrad/ts-suerwars-day4.png)
 
 Happy Coding ProGrad ❤️
