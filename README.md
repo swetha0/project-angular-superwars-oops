@@ -66,10 +66,40 @@ To generate the starter code, follow the steps given below
 
 ### Progression 1: Rethink and reuse
 
-Now, add `member variables` like id, name, strength, image and type to `interface``Player` and then assign them appropriate values such that they _return a valid player object_.
-*  `strength` can be generated from `getRandomStrength()` `member function`, which _returns a random strength_ from 1 to 100 .
-* `image` can be sequential i.e. "images/super-"+(i+1)+".png"  
-* `type` of player can alternating between hero and villain or your own logic
+* Right click src folder and create a folder called supers and create an interface called SuperInterface with the following parameters
+```
+export interface SuperInterface{
+    name: string;
+}
+```
+* Inside the supers folder create superlist.ts and add the below code
+```
+import { HeroListInterface } from '../heros/herosInterface';
+
+export const Heros : HeroListInterface[]=[
+ {   name : "Spiderman"},
+  {  name : "Captain America"},
+  {  name : "Wonderwoman"},
+  {  name : "Popcorn"},
+  {  name : "Gemwoman"},
+  {  name : "Bolt"},
+  {  name : "Antwoman"},
+  {  name : "Mask"},
+  {  name : "Tiger"},
+  {  name : "Captain"},
+  {  name : "Catwoman"},
+  {  name : "Fish"},
+  {  name : "Hulk"},
+  {  name : "Ninja"},
+  {  name : "Black Cat"},
+  {  name : "Volverine"},
+  { name :  "Thor"},
+  {  name : "Slayer"},
+  {  name : "Vader"},
+  {  name : "Slingo"}
+];
+```
+* import the list into app.component.ts and return a list of supers object like the snippet given below
     ```
     [
         {
@@ -84,8 +114,8 @@ Now, add `member variables` like id, name, strength, image and type to `interfac
 
 ### Progression 2: Make it subtle
 
-Dustin and Lucus want to display the players. So help them by creating a method `view()`, to accumulate HTML template as below and _return an HTML element_.
-```JS
+Dustin and Lucus want to display the players. So help them by creating a method `viewPlayers()`, to accumulate HTML template as below and _return an HTML element_.
+```
 <div class="player" data-id="${players[i].id}">
     <img src="${players[i].image}">
     <div class="name">${players[i].name}</div>
@@ -99,6 +129,6 @@ To begin the war there should be players, we can generate players by creating an
 
 ## Expected Output
 
-![Superwars](doc/superwars-oops.png)
+![Superwars]()
 
 Happy Coding ProGrad ❤️
